@@ -15,10 +15,12 @@ A small image editing tool built using **only NumPy array operations** — no Op
 ## Project structure
 ```
 numpy-image-editor/
-├── edit_image.py              # the main tool (function + CLI)
+├── edit_image.py       # the main tool (function + CLI)
+├── image 1             # add image
+├── image 2             # add image
 ├── README.md
 ├── notebooks/
-│   └── exploration.ipynb      # step-by-step development notebook
+│   └── image-edit.ipynb      # step-by-step development notebook
 ```
 
 ## Installation
@@ -28,23 +30,7 @@ pip install numpy pillow
 
 ## Usage
 
-### Option 1 — as a Python function
-```python
-from edit_image import edit_image
 
-edit_image("photo.jpg", operation="grayscale", save_as="gray.jpg")
-edit_image("photo.jpg", operation="brightness", value=40, save_as="bright.jpg")
-edit_image("photo.jpg", operation="crop", value="100,300,200,500", save_as="crop.jpg")
-edit_image("photo.jpg", operation="blend", path2="photo2.jpg", value=0.5, save_as="blend.jpg")
-```
-
-### Option 2 — command line
-```bash
-python edit_image.py photo.jpg --operation brightness --value 40 --save_as bright.jpg
-python edit_image.py photo.jpg --operation crop --value "100,300,200,500" --save_as crop.jpg
-```
-
-### Option 3 — interactive mode (just type the operation name)
 ```bash
 python edit_image_interactive.py
 ```
